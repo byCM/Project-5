@@ -57,6 +57,4 @@ class PostForm(Form):
     date = StringField('Date', validators=[DataRequired()])
     time_spent = StringField('Time Spent', validators=[DataRequired()])
     learning = TextAreaField('What I Learned', validators=[DataRequired()])
-    resources = TextAreaField('Resources to Remember', validators=[DataRequired()])
-    
-            
+    resources = TextAreaField('Resources to Remember', validators=[DataRequired()])                

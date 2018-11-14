@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ super() }} - Home{% endblock %}
+
+{% block header %}
+<a class="button icon-right" href="{{ url_for('post') }}" style="padding-right:30px;"><span>New Entry</span> <i class="material-icons">add</i></a>
+{% endblock %}
+
+{% block content %}
+
+{% if journal %}
+    <h1>{{ user.username }}'s Journal</h1><br>
+    <h3 style="text-align:center;">Here are your most recent entries</h3>
+    {% endif %}
+    <div class="flex">
+    </div>
+{% else %}
+    <h2 style="text-align:center;">Welcome {{ user.username }} to your new journal!</h2>
+    <p style="text-align:center;">Click new entry button at the top right corner of this page to get started.</p>
+{% endif %}
+{% endblock %}

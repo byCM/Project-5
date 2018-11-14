@@ -2,4 +2,4 @@
 
 LOGIN 
 
-Email: buggy@gmail.com                                                                                                                      Password password
+Email: buggy@gmail.com                                                                                                                      Password: password

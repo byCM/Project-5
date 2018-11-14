@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% for post in stream %}
+	  <article>
+      
+		  <h1>Title: {{ post.title }}</h1>
+      <h1>Created: {{ post.timestamp }}</h1>
+           
+		<p>by <a href="{{ url_for('stream', username=post.user.username) }}">{{ post.user.username }} </a>
+      <a class="button icon-left" href="{{ url_for('detail', postid=post.id) }}" class="new">View Details</a>
+      
+		</article>
+	{% endfor %}
+<h4>There are {{ total }} entries.</h4>
+{% endblock %}
